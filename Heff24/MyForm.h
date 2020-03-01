@@ -78,17 +78,20 @@ namespace Heff24 {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(12, 22);
+			this->textBox1->Location = System::Drawing::Point(16, 27);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->ReadOnly = true;
-			this->textBox1->Size = System::Drawing::Size(234, 20);
+			this->textBox1->Size = System::Drawing::Size(311, 22);
 			this->textBox1->TabIndex = 0;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(270, 22);
+			this->button1->Location = System::Drawing::Point(360, 27);
+			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(130, 23);
+			this->button1->Size = System::Drawing::Size(173, 28);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Открыть";
 			this->button1->UseVisualStyleBackColor = true;
@@ -96,9 +99,10 @@ namespace Heff24 {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(12, 59);
+			this->button2->Location = System::Drawing::Point(16, 73);
+			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(109, 23);
+			this->button2->Size = System::Drawing::Size(145, 28);
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"Кодировать";
 			this->button2->UseVisualStyleBackColor = true;
@@ -107,9 +111,10 @@ namespace Heff24 {
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(127, 59);
+			this->button3->Location = System::Drawing::Point(169, 73);
+			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(76, 23);
+			this->button3->Size = System::Drawing::Size(101, 28);
 			this->button3->TabIndex = 3;
 			this->button3->Text = L"Сохранить";
 			this->button3->UseVisualStyleBackColor = true;
@@ -118,9 +123,10 @@ namespace Heff24 {
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(324, 59);
+			this->button4->Location = System::Drawing::Point(432, 73);
+			this->button4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(76, 23);
+			this->button4->Size = System::Drawing::Size(101, 28);
 			this->button4->TabIndex = 5;
 			this->button4->Text = L"Сохранить";
 			this->button4->UseVisualStyleBackColor = true;
@@ -129,9 +135,10 @@ namespace Heff24 {
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(209, 59);
+			this->button5->Location = System::Drawing::Point(279, 73);
+			this->button5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(109, 23);
+			this->button5->Size = System::Drawing::Size(145, 28);
 			this->button5->TabIndex = 4;
 			this->button5->Text = L"Декодировать";
 			this->button5->UseVisualStyleBackColor = true;
@@ -141,17 +148,19 @@ namespace Heff24 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(18, 113);
+			this->label1->Location = System::Drawing::Point(24, 139);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(0, 13);
+			this->label1->Size = System::Drawing::Size(0, 17);
 			this->label1->TabIndex = 6;
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(18, 146);
+			this->label2->Location = System::Drawing::Point(24, 180);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(0, 13);
+			this->label2->Size = System::Drawing::Size(0, 17);
 			this->label2->TabIndex = 7;
 			// 
 			// openFileDialog1
@@ -161,9 +170,9 @@ namespace Heff24 {
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(415, 340);
+			this->ClientSize = System::Drawing::Size(553, 418);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button4);
@@ -172,6 +181,7 @@ namespace Heff24 {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox1);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
@@ -235,9 +245,11 @@ private: System::Void button5_Click(System::Object^  sender, System::EventArgs^ 
 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 	//каким-то образом передаём 
-	//раскодированный код для сохранения
+	//раскодированный код для сохр
 	this->saveFileDialog2->ShowDialog();
 
+}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
